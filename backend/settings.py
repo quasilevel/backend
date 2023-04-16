@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'member',
     'fractal',
+    'rest_framework',
+    'api'
+
 ]
 
 MIDDLEWARE = [
