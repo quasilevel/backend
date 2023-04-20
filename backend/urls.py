@@ -5,6 +5,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('member.urls')),
     path('', include('fractal.urls')),
-    path('api-auth/', include('api.urls')),
     
 ]

@@ -1,8 +1,8 @@
 from rest_framework import serializers
 from rest_framework.serializers import *
-from fractal.models import task
+from .models import task
 
-class fractalserializer(serializers.HyperlinkedModelSerializer):
+class taskserializer(serializers.ModelSerializer):
     class Meta:
         model = task
         fields =  ['id', 'title', 'summary', 'issue',
