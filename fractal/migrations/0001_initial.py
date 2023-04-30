@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('created_at', models.DateField()),
                 ('completed_at', models.DateField()),
                 ('state', models.CharField(choices=[('pending', 'pending'), ('active', 'active'), ('completed', 'completed'), ('dropped', 'dropped')], default='pending', max_length=20)),
-                ('assignee', models.CharField(max_length=50, null=True)),
+                ('assignee', models.CharField(max_length=50)),
             ],
         ),
     ]

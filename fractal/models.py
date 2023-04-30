@@ -2,6 +2,10 @@ from django.db import models
 from django.core.validators import MinLengthValidator
 from django.contrib.postgres.fields import ArrayField
 
+class person(models.Model):
+    name = models.ArrayField(models.CharField(max_length=50),blank=True)
+ 
+
 class task(models.Model):
     title = models.CharField(max_length=50, validators=[MinLengthValidator(10)])
     summary = models.TextField(max_length=100,validators=[MinLengthValidator(20)])
@@ -15,12 +19,8 @@ class task(models.Model):
         ('dropped', 'dropped'),
     ]
     state = models.CharField(max_length=20, choices = state_choices,default='pending')
-    assignee= ArrayField(models.CharField(max_length=50,null=True),default=list)
+    assignee =models.ForeignKey( person, on_delete=models.CASCADE)
 
  
-
     def __str__(self):
         return self.title
-    
-
-
