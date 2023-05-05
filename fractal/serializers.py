@@ -7,3 +7,5 @@ class taskserializer(serializers.ModelSerializer):
         model = task
         fields =  ['id', 'title', 'summary', 'issue',
                      'created_at', 'completed_at', 'state', 'assignee',]
+        
+ 
